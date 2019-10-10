@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/add_new_menu"
+            android:title="@string/add_new_feed_text"
+            android:icon="@drawable/ic_add_black"
+            app:showAsAction="always"/>
+
+    <item
+            android:id="@+id/edit_posting_menu"
+            android:title="@string/edit_posting_feed_text"
+            android:icon="@drawable/ic_edit_black"
+            app:showAsAction="ifRoom"/>
+
+    <item
+            android:id="@+id/delete_posting_menu"
+            android:title="@string/delete_posting_feed"
+            android:icon="@drawable/ic_delete_black"
+            app:showAsAction="ifRoom"/>
+</menu>

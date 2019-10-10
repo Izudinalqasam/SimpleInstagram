@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SimpleInstagram</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="feed_header_title">Feed</string>
+    <string name="add_new_feed_text">add new feed</string>
+    <string name="edit_posting_feed_text">edit existing feed</string>
+    <string name="delete_posting_feed">delete posting feed</string>
+    <string name="cant_get_comment">Gagal mendapatkan komentar</string>
+    <string name="text_delete_success">Data berhasil dihapus</string>
+    <string name="text_delete_gagal">Data tidak dapat dihapus</string>
+    <string name="feed_posting_success">Feed berhasil di posting</string>
+    <string name="feed_failed_posting">Feed gagal diposting</string>
+</resources>

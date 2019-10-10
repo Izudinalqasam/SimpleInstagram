@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="posting"
+                  type="ibnu.sina.simpleinstagram.model.postingmodel.getpostingmodel.BodyGetPostingResponse"/>
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/swipe_detail_feed">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.fragment.DetailFragment"
+                android:id="@+id/frameLayout2">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/network_profile"
+                    android:id="@+id/img_profil_detail_feed"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"/>
+            <TextView
+                    android:text="Jackson Five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_name_detail_feed"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/img_profil_detail_feed"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintTop_toTopOf="@+id/img_profil_detail_feed"
+                    android:textStyle="bold" app:layout_constraintBottom_toBottomOf="@+id/img_profil_detail_feed"/>
+            <TextView
+                    android:text="16 Jan 2019"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_date_detail_feed"
+                    app:layout_constraintStart_toEndOf="@+id/img_profil_detail_feed"
+                    android:layout_marginStart="16dp"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name_detail_feed"
+                    android:layout_marginTop="8dp"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/ic_more_vert_black"
+                    android:id="@+id/ic_option_detail_feed" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/img_profil_detail_feed"/>
+            <TextView
+                    android:text="@{posting.title}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:id="@+id/tv_title_detail_feed" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/img_profil_detail_feed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"/>
+            <TextView
+                    android:text="@{posting.body}"
+                    tools:text="TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_content_detail_feed" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_detail_feed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"/>
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/banner_kemerdekaan"
+                    android:id="@+id/img_banner_feed"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/tv_content_detail_feed"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/img_banner_feed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" android:id="@+id/rv_comment_detail_feed"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>
