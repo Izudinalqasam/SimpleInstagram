@@ -7,3 +7,4 @@ Simple Instagram using these technology
 4. Unit Test
 5. Data Binding
 6. Retrofit
+7. RxJava
